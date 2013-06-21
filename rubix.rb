@@ -27,6 +27,10 @@ on :channel, /status/ do
   check
 end
 
+on :channel, /!pickforequi/ do
+  msg channel, ['run','row','swimming'].sample
+end
+
 on :error, 401 do
   puts "Ok, #{nick} doesn't exist."
 end
